@@ -1,0 +1,128 @@
+.search-and-filters {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-tertiary);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px 12px 44px;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border-medium);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: var(--transition-base);
+    font-family: inherit;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--brand-accent);
+    background: var(--bg-card);
+    box-shadow: 0 0 0 4px var(--brand-accent-subtle);
+}
+
+.filter-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-subtle);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-medium);
+}
+
+.sort-icon {
+    color: var(--text-tertiary);
+}
+
+.sort-select {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding-right: 4px;
+    font-family: inherit;
+    outline: none;
+}
+
+.status-filters {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.status-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background: var(--bg-subtle);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid var(--border-medium);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-tertiary);
+    background: var(--bg-card);
+}
+
+.filter-btn.active {
+    background: var(--brand-accent);
+    color: white;
+    border-color: var(--brand-accent);
+    box-shadow: 0 4px 12px var(--brand-accent-subtle);
+}
+
+.filter-btn.active .status-dot {
+    background: white;
+}
+
+[data-theme='light'] .filter-btn:not(.active) {
+    background: #f8fafc;
+}
+
+[data-theme='light'] .search-input {
+    background: #f8fafc;
+}

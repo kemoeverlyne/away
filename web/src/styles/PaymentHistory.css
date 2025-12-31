@@ -1,0 +1,58 @@
+.payment-history-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.payment-history-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.payment-history-header h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+}
+
+.payment-count {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.payment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.payment-item {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1rem;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.payment-date { font-size: 0.8125rem; color: #94a3b8; }
+.payment-amount { font-size: 0.875rem; font-weight: 600; color: #f8fafc; }
+
+.payment-status {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.payment-status.status-On_Time { color: #10b981; }
+.payment-status.status-Late { color: #fbbf24; }
+.payment-status.status-Defaulted { color: #f43f5e; }

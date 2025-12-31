@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --brand-primary: #004D54; /* Deep Teal */
+  --brand-accent: #00B5D1; /* Cyan from logo */
+  --brand-accent-subtle: #e6f9fb;
+  --brand-success: #10b981;
+  --brand-warning: #f59e0b;
+  --brand-danger: #ef4444;
+
+  --bg-app: #f4f7f8;
+  --bg-sidebar: #001f22; 
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --text-on-brand: #ffffff;
+  
+  --border-subtle: #eef2f3;
+  --border-medium: #e2e8f0;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 77, 84, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 77, 84, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 25px 50px -12px rgba(0, 77, 84, 0.15);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+
+  --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='dark'] {
+  --bg-app: #000c0d;
+  --bg-sidebar: #000708;
+  --bg-card: #001a1c;
+  --bg-subtle: #002326;
+  
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #5d747a;
+  
+  --border-subtle: #002d30;
+  --border-medium: #003a3d;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --brand-accent-subtle: rgba(0, 181, 209, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: var(--transition-premium);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+[data-theme='dark'] .glass {
+  background: rgba(0, 26, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.01em;
+}
+
+.badge-green { background: #dcfce7; color: #15803d; }
+.badge-blue { background: #e0f2fe; color: #0369a1; }
+.badge-red { background: #fee2e2; color: #b91c1c; }
+.badge-orange { background: #ffedd5; color: #9a3412; }
+.badge-gray { background: #f1f5f9; color: #475569; }
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.status-dot.ontime { background-color: var(--brand-success); }
+.status-dot.late { background-color: var(--brand-warning); }
+.status-dot.defaulted { background-color: var(--brand-danger); }
+.status-dot.unpaid { background-color: var(--text-tertiary); }
+.status-dot.all { background-color: var(--brand-accent); }
+
+[data-theme='dark'] .badge-green { background: rgba(21, 128, 61, 0.2); color: #4ade80; }
+[data-theme='dark'] .badge-blue { background: rgba(3, 105, 161, 0.2); color: #38bdf8; }
+[data-theme='dark'] .badge-red { background: rgba(185, 28, 28, 0.2); color: #f87171; }
+[data-theme='dark'] .badge-orange { background: rgba(154, 52, 18, 0.2); color: #fb923c; }
+[data-theme='dark'] .badge-gray { background: rgba(71, 85, 105, 0.2); color: #94a3b8; }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}

@@ -1,0 +1,60 @@
+.error-snackbar {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+}
+
+.error-alert {
+  background: white;
+  color: var(--brand-danger);
+  padding: 16px 28px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 320px;
+  max-width: 90vw;
+  border-bottom: 4px solid var(--brand-danger);
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme='dark'] .error-alert {
+  background: var(--bg-card);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.error-close-button {
+  background: var(--bg-subtle);
+  border: none;
+  color: var(--text-tertiary);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: var(--transition-premium);
+}
+
+.error-close-button:hover {
+  background: var(--brand-danger);
+  color: white;
+  transform: rotate(90deg);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,142 @@
+.loan-card {
+    background: #161b2b;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.loan-card:hover {
+    border-color: rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+}
+
+.loan-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.loan-status {
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.loan-status.ontime { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+.loan-status.late { color: #fbbf24; background: rgba(251, 191, 36, 0.1); }
+.loan-status.defaulted { color: #f43f5e; background: rgba(244, 63, 94, 0.1); }
+.loan-status.unpaid { color: #94a3b8; background: rgba(148, 163, 184, 0.1); }
+
+.loan-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detail-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.progress-section {
+    margin-top: auto;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.progress-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+}
+
+.progress-percentage {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #38bdf8;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.action-button {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.add-payment-button {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.view-details-button {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-details-button:hover {
+    color: #f8fafc;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.days-remaining {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: rgba(244, 63, 94, 0.1);
+    color: #f43f5e;
+    margin-top: 0.25rem;
+    display: inline-block;
+}
